@@ -4,7 +4,6 @@
 <div class="l-margin">
     <div class="l-site-width">
         <div class="c-wrapper">
-            <div class="card">
                 <h1 class="c-title">ご確認をお願いいたします。</h1>
 
                 <div class="card-body">
@@ -17,7 +16,7 @@
                     <p class="c-text">ご登録いただいたメールアドレスに認証メールをお送りしましたので、ご確認をお願いいたします。</p>
                     <span class="c-text">メールが届かない場合は、</span><a class="c-text" href="{{ route('verification.resend') }}">コチラをクリックしてください。</a>
                 </div>
-            </div>
+
         </div>
     </div>
 </div>

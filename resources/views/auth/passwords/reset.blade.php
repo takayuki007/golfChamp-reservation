@@ -3,7 +3,7 @@
 @section('content')
 <div class="l-margin">
     <div class="l-site-width">
-        <div class="c-heading p-text-center">パスワードリセット</div>
+        <h1 class="c-heading p-text-center">パスワードリセット</h1>
 
         <div class="c-form">
             <form method="POST" action="{{ route('password.update') }}">
@@ -52,7 +52,9 @@
                         パスワードリセット
                     </button>
                 </div>
+
             </form>
+
         </div>
     </div>
 </div>

@@ -3,7 +3,8 @@
 @section('content')
 <div class="l-margin">
     <div class="l-site-width">
-        <div class="c-heading p-text-center">パスワードリセット</div>
+
+        <h1 class="c-heading p-text-center">パスワードリセット</h1>
 
         <div class="c-form">
             @if (session('status'))
@@ -29,13 +30,16 @@
                     </div>
                 </div>
 
-                        <div class="c-form-group">
-                            <button type="submit" class="c-btn">
-                                パスワードリセットリンク送信
-                            </button>
-                        </div>
-                    </form>
+                <div class="c-form-group">
+                    <button type="submit" class="c-btn">
+                        パスワードリセットリンク送信
+                    </button>
                 </div>
+
+            </form>
+
+        </div>
+
     </div>
 </div>
 @endsection

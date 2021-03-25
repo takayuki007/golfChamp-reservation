@@ -8,6 +8,7 @@
         <div class="c-form">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
+
                 <div class="c-form-group">
                     <label for="name" class="c-text">名前</label>
 
@@ -63,6 +64,7 @@
                         登録
                     </button>
                 </div>
+
             </form>
         </div>
     </div>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="l-margin">
     <div class="l-site-width">
-        <div class="c-heading p-text-center">ログイン</div>
+        <h1 class="c-heading p-text-center">ログイン</h1>
 
         <div class="c-form">
             <form method="POST" action="{{ route('login') }}">
@@ -39,13 +39,11 @@
 
                 <div class="c-form-group">
                     <div class="c-form-check-area">
-<!--                        <div class="form-check">-->
-                            <input class="c-form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <input class="c-form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                            <label class="c-form-check-label" for="remember">
-                                自動でログイン
-                            </label>
-<!--                        </div>-->
+                        <label class="c-form-check-label" for="remember">
+                            自動でログイン
+                        </label>
                     </div>
                 </div>
 
@@ -60,7 +58,9 @@
                         </a>
                     @endif
                 </div>
+
             </form>
+
         </div>
     </div>
 </div>

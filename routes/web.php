@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/mypage', function () {
-    return view('mypage');
-});
-
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware'=>'verified'], function (){
@@ -26,4 +19,3 @@ Route::group(['middleware'=>'verified'], function (){
     Route::get('/reservation', 'ReservationController@index')->name('reservation');
     Route::post('/reservation/store', 'ReservationController@store')->name('reservation.store');
 });
-Route::get('/confirmation', 'ConfirmationController@index')->name('confirmation');
