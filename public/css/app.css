@@ -150,6 +150,11 @@ table {
   }
 }
 
+.l-main {
+  width: 100%;
+  height: auto;
+}
+
 .l-margin {
   margin: 60px 0;
 }
@@ -419,10 +424,5 @@ table {
 .u-space-area {
   margin-top: 24px;
   margin-bottom: 24px;
-}
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
