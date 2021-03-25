@@ -23,6 +23,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    //マイページを表示
     public function index()
     {
         $reservations = Auth::user()->reservations()->latest()->get();

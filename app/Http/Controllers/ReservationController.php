@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
+    //予約ページを表示
     public function index()
     {
         $times = Time::get();
@@ -19,6 +20,7 @@ class ReservationController extends Controller
         return view('reservation',['times'=>$times, 'locations'=>$locations, 'coaches'=>$coaches]);
     }
 
+    //予約処理
     public function store(Request $request)
     {
         $request->validate([

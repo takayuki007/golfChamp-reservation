@@ -47,6 +47,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $this->notify(new CustomResetPassword($token));
     }
 
+    //reservationのリレーション
     public function reservations()
     {
         return $this->hasMany('App\Reservation');
