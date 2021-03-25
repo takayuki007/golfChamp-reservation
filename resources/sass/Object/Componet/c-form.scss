@@ -1,0 +1,10 @@
+//formの幅
+.c-form{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+
+    @include sp(){
+        width: 90%;
+    }
+}

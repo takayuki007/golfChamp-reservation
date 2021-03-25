@@ -1,0 +1,11 @@
+//ログインラベルのテキスト部分
+.c-form-check-label{
+    font-size: 18px;
+    color: $black;
+
+    &:hover{
+        cursor: pointer;
+        opacity: .7;
+        text-decoration: underline;
+    }
+}

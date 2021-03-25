@@ -1,0 +1,10 @@
+//要素の中央寄せ
+.l-site-width{
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+
+    @include sp(){
+        width: 100%;
+    }
+}

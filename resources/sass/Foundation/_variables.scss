@@ -1,0 +1,51 @@
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+//$indigo: #6574cd;
+//$purple: #9561e2;
+//$pink: #f66D9b;
+$red: #e3342f;
+//$orange: #f6993f;
+//$yellow: #ffed4a;
+$green: #81EFBE;
+$dark-green: #3D725B;
+//$teal: #4dc0b5;
+//$cyan: #6cb2eb;
+$black: #000;
+$white: #fff;
+$gray:#F2F2F2;
+
+//margin
+$margin-ss: 8px;
+$margin-s: 12px;
+$margin-m: 16px;
+$margin-l: 20px;
+$margin-ll: 24px;
+
+//padding
+$padding-ss: 8px;
+$padding-s: 12px;
+$padding-m: 16px;
+$padding-l: 20px;
+$padding-ll: 24px;
+
+//map
+$breakpoints: (
+    'sm': 'screen and (max-width: 414px)',
+    'md': 'screen and (max-width: 780px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin sp($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

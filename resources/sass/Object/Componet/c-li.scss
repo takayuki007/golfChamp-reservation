@@ -1,0 +1,8 @@
+//headerのli部分
+.c-li{
+    margin-right: $margin-m;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}

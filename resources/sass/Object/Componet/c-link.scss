@@ -1,0 +1,15 @@
+//headerのリンク部分
+.c-link{
+    font-size: 28px;
+    color: $dark-green;
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        opacity: .75;
+    }
+
+    @include sp(){
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,13 @@
+//header
+.l-header{
+    height: 100px;
+    width: 100%;
+    background: $green;
+    box-sizing: border-box;
+    padding: $padding-m;
+
+    @include sp(){
+        padding: $padding-s;
+        height: 60px;
+    }
+}

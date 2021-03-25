@@ -1,0 +1,12 @@
+//パスワード忘れのリンク
+.u-login-link{
+    display: block;
+    margin-top: $margin-l;
+    font-size: 18px;
+    color: $black;
+
+    &:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+}

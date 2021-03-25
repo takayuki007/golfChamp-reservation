@@ -1,0 +1,10 @@
+//予約関係の要素まとめ
+.c-reservation-group{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+
+    @include sp(){
+        width: 90%;
+    }
+}

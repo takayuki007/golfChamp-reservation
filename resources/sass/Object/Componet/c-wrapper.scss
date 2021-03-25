@@ -1,0 +1,8 @@
+// 包む部分
+.c-wrapper{
+    width: 50%;
+    margin: 0 auto;
+    @include sp(){
+        width: 90%;
+    }
+}

@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.l-header {
+  height: 100px;
+  width: 100%;
+  background: #81EFBE;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  .l-header {
+    padding: 12px;
+    height: 60px;
+  }
+}
+
+.l-margin {
+  margin: 60px 0;
+}
+
+.l-site-width {
+  width: 980px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  .l-site-width {
+    width: 100%;
+  }
+}
+
+.l-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-alert-success {
+  color: #3490dc;
+}
+
+.c-btn {
+  background: #3D725B;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.c-btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.c-btn-area {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.c-btn-second {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background: #3D725B;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.c-btn-second:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.c-form {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  .c-form {
+    width: 90%;
+  }
+}
+
+.c-form-check-area {
+  margin: 24px 0;
+}
+
+.c-form-check-label {
+  font-size: 18px;
+  color: #000;
+}
+
+.c-form-check-label:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.c-form-group {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.c-form-check-input:hover {
+  cursor: pointer;
+}
+
+.c-heading {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.c-input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background: #F2F2F2;
+}
+
+.c-input-area {
+  margin-top: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.c-invalid-feedback {
+  color: #e3342f;
+}
+
+.c-is-invalid {
+  border: #e3342f solid 1px;
+}
+
+.c-li {
+  margin-right: 16px;
+}
+
+.c-li:last-child {
+  margin-right: 0;
+}
+
+.c-link {
+  font-size: 28px;
+  color: #3D725B;
+  text-decoration: none;
+}
+
+.c-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 414px) {
+  .c-link {
+    font-size: 20px;
+  }
+}
+
+.c-logo {
+  height: 100%;
+}
+
+.c-logo-link {
+  font-size: 24px;
+  line-height: 68px;
+  text-decoration: none;
+  color: #3D725B;
+}
+
+.c-logo-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 414px) {
+  .c-logo-link {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+.c-reservation {
+  margin-bottom: 20px;
+}
+
+.c-reservation-group {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  .c-reservation-group {
+    width: 90%;
+  }
+}
+
+.c-reservation-li {
+  background: #F2F2F2;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.c-reservation-ul {
+  width: 100%;
+  height: auto;
+}
+
+.c-text {
+  font-size: 18px;
+  color: #000;
+  line-height: 1.5em;
+}
+
+.c-title {
+  font-size: 20px;
+  color: #3D725B;
+  width: 100%;
+  border-bottom: 3px solid #3D725B;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.c-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  .c-wrapper {
+    width: 90%;
+  }
+}
+
+.p-text-center {
+  text-align: center;
+}
+
+.u-color-red {
+  color: #e3342f;
+}
+
+.u-login-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #000;
+}
+
+.u-login-link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.u-margin-top {
+  margin-top: 60px;
+}
+
+.u-space-area {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
