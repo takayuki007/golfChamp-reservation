@@ -20,10 +20,10 @@
                     <label for="email" class="c-text">メールアドレス</label>
 
                     <div class="c-input-area">
-                        <input type="email" class="c-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <input type="email" class="c-input @error('email') c-is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="c-invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror

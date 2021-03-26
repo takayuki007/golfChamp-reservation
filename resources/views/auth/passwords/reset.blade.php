@@ -15,10 +15,10 @@
                     <label for="email" class="c-text">メールアドレス</label>
 
                     <div class="c-input-area">
-                        <input type="email" class="c-input @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
+                        <input type="email" class="c-input @error('email') c-is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="c-invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -29,10 +29,10 @@
                     <label for="password" class="c-text">パスワード</label>
 
                     <div class="c-input-area">
-                        <input type="password" class="c-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <input type="password" class="c-input @error('password') c-is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         @error('password')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="c-invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
