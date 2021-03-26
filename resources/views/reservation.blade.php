@@ -31,10 +31,10 @@
                     <label for="time_id" class="c-text">■時間</label>
 
                     <div class="c-input-area">
-                        <select name="time_id" class="c-input @error('time_id') c-is-invalid @enderror" value="{{ old('time') }}">
+                        <select name="time_id" class="c-input @error('time_id') c-is-invalid @enderror">
                             <option value="">選択してしてください</option>
                             @foreach($times as $time)
-                                <option value="{{ $time->id }}">{{ $time->time }}</option>
+                                <option value="{{ $time->id }}" @if(old('time_id')== $time->id) selected  @endif>{{ $time->time }}</option>
                             @endforeach
                         </select>
 
@@ -50,10 +50,10 @@
                     <label for="coach_id" class="c-text">■コーチ</label>
 
                     <div class="c-input-area">
-                        <select name="coach_id" class="c-input @error('coach_id') c-is-invalid @enderror" value="{{ old('coach') }}">
+                        <select name="coach_id" class="c-input @error('coach_id') c-is-invalid @enderror">
                             <option value="">選択してください</option>
                             @foreach($coaches as $coach)
-                                <option value="{{ $coach->id }}">{{ $coach->name }}</option>
+                                <option value="{{ $coach->id }}" @if(old('coach_id')== $coach->id) selected  @endif>{{ $coach->name }}</option>
                             @endforeach
                         </select>
 
@@ -72,7 +72,7 @@
                         <select name="location_id" class="c-input @error('location_id') c-is-invalid @enderror" value="{{ old('location') }}">
                             <option value="">選択してください</option>
                             @foreach($locations as $location)
-                            <option value="{{ $location->id }}">{{ $location->name }}({{ $location->address }})</option>
+                            <option value="{{ $location->id }}" @if(old('location_id')== $location->id) selected  @endif>{{ $location->name }}({{ $location->address }})</option>
                             @endforeach
                         </select>
 

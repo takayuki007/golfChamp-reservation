@@ -157,7 +157,10 @@ return [
     'attributes' => [
         'name'=>'名前',
         'email'=>'メールアドレス',
-        'password'=>'パスワード'
+        'password'=>'パスワード',
+        'time_id'=>'時間',
+        'coach_id'=>'コーチ',
+        'location_id'=>'レッスン場所'
     ],
 
 ];
