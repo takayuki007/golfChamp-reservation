@@ -13,10 +13,10 @@
                     <label for="name" class="c-text">名前</label>
 
                     <div class="c-input-area">
-                        <input type="text" class="c-input @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <input type="text" class="c-input @error('name') c-is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                         @error('name')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -27,10 +27,10 @@
                     <label for="email" class="c-text">メールアドレス</label>
 
                     <div class="c-input-area">
-                        <input type="email" class="c-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <input type="email" class="c-input @error('email') c-is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                         @error('email')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -41,10 +41,10 @@
                     <label for="password" class="c-text">パスワード</label>
 
                     <div class="c-input-area">
-                        <input type="password" class="c-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <input type="password" class="c-input @error('password') c-is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         @error('password')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
