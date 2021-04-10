@@ -222,7 +222,6 @@ table {
 .c-file {
   width: 100%;
   height: 40px;
-  opacity: 0;
 }
 
 .c-form {
@@ -350,6 +349,11 @@ table {
     font-size: 20px;
     line-height: 36px;
   }
+}
+
+.c-prof-img {
+  width: 100%;
+  height: auto;
 }
 
 .c-reservation {

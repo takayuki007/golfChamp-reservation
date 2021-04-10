@@ -14,8 +14,8 @@
 
                     <div class="c-input-area">
                         <div class="c-img-area">
-                            <p class="c-text p-text-center">画像を選択</p>
-                            <input type="file" class="c-file @error('file') c-is-invalid @enderror" value="{{ old('file') }}" name="img" required>
+                            <input type="file" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('file') }}" name="img" required>
+                            <img src="" alt="" class="c-prof-img js-prof-img">
                         </div>
 
                         @error('file')
