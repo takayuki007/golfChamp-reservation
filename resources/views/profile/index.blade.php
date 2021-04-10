@@ -47,9 +47,9 @@
 
                 <div class="c-form-group">
                     <label for="note" class="c-text">■備考</label>
-
+                    <p class="c-text p-text-right"><span class="c-text js-show-count">0</span>/200</p>
                     <div class="c-input-area">
-                        <textarea name="note" class="c-textarea" cols="30" rows="10" placeholder="何かあればご記入ください"></textarea>
+                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください"></textarea>
 
                         @error('note')
                         <span class="c-invalid-feedback" role="alert">

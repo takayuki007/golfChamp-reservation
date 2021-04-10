@@ -430,6 +430,10 @@ table {
   text-align: center;
 }
 
+.p-text-right {
+  text-align: right;
+}
+
 .u-color-red {
   color: #e3342f;
 }
