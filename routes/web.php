@@ -22,7 +22,10 @@ Route::group(['middleware'=>'verified'], function (){
     Route::get('/reservation', 'ReservationController@index')->name('reservation');
     //予約処理
     Route::post('/reservation/store', 'ReservationController@store')->name('reservation.store');
-    //プロフィール
+    //プロフィールページを表示
     Route::get('/profile/index', 'ProfileController@index')->name('index');
+    //プロフィール登録処理
+    Route::post('/profile/store', 'ProfileController@store')->name('profile.store');
+
 });
 

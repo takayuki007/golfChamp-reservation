@@ -7,14 +7,14 @@
             <h1 class="c-title p-text-center">プロフィール</h1>
         </div>
         <div class="c-form">
-            <form method="post" action="{{ route('reservation.store') }}">
+            <form method="post" action="{{ route('profile.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="c-form-group">
                     <label for="file" class="c-text">■プロフィール画像</label>
 
                     <div class="c-input-area">
                         <div class="c-img-area">
-                            <input type="file" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('file') }}" name="img" required>
+                            <input type="file" name="img" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('img') }}" required>
                             <img src="" alt="" class="c-prof-img js-prof-img">
                         </div>
 
@@ -30,11 +30,11 @@
                     <label for="golf" class="c-text">■ゴルフ歴について</label>
 
                     <div class="c-input-area">
-                        <select name="golf" class="c-input @error('golf') c-is-invalid @enderror">
+                        <select name="golf_id" class="c-input @error('golf') c-is-invalid @enderror">
                             <option value="">選択してしてください</option>
-                            <option value="1">1年未満</option>
-                            <option value="2">1年以上3年未満</option>
-                            <option value="3">3年以上</option>
+                            @foreach($histories as $history)
+                                <option value="{{ $history->id }}" @if(old('golf_id')== $history->id) selected  @endif>{{ $history->year }}</option>
+                            @endforeach
                         </select>
 
                         @error('golf')
@@ -49,7 +49,7 @@
                     <label for="note" class="c-text">■備考</label>
                     <p class="c-text p-text-right"><span class="c-text js-show-count">0</span>/200</p>
                     <div class="c-input-area">
-                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください"></textarea>
+                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note') }}</textarea>
 
                         @error('note')
                         <span class="c-invalid-feedback" role="alert">

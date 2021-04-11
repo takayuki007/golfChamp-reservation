@@ -52,4 +52,10 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         return $this->hasMany('App\Reservation');
     }
+
+    //profileのリレーション
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
 }
