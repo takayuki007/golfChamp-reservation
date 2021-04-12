@@ -135,6 +135,14 @@ table {
   border-spacing: 0;
 }
 
+.l-bg-green {
+  width: 100%;
+  height: auto;
+  background: #81EFBE;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
 .l-header {
   height: 100px;
   width: 100%;
@@ -178,6 +186,35 @@ table {
 
 .c-alert-success {
   color: #3490dc;
+}
+
+.c-answer {
+  height: 216px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  padding: 16px;
+}
+
+.c-blackGreen {
+  background: #227223;
+  height: 284px;
+  position: relative;
+}
+
+.c-box {
+  width: 33%;
+  box-sizing: border-box;
+  margin-right: 16px;
+}
+
+.c-box:last-child {
+  margin-right: 0;
+}
+
+.c-box-img {
+  width: 100%;
 }
 
 .c-btn {
@@ -351,9 +388,23 @@ table {
   }
 }
 
+.c-obi-img {
+  height: 392px;
+  width: 40%;
+}
+
 .c-prof-img {
   width: 100%;
   height: auto;
+}
+
+.c-question {
+  background: #fff;
+  width: 100%;
+  height: 72px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  padding: 16px;
 }
 
 .c-reservation {
@@ -409,6 +460,12 @@ table {
   margin-bottom: 24px;
 }
 
+.c-top-img {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
 .c-ul {
   display: flex;
   justify-content: space-between;
@@ -426,6 +483,10 @@ table {
   }
 }
 
+.p-margin-text-top {
+  margin-top: 20px;
+}
+
 .p-text-center {
   text-align: center;
 }
@@ -434,8 +495,35 @@ table {
   text-align: right;
 }
 
+.u-align-items-center {
+  align-items: center;
+}
+
+.u-block-center {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-check-square {
+  margin-right: 16px;
+  font-size: 40px;
+  vertical-align: middle;
+}
+
 .u-color-red {
   color: #e3342f;
+}
+
+.u-color-white {
+  color: #fff;
+}
+
+.u-height-adjust {
+  height: 400px;
+  position: relative;
 }
 
 .u-login-link {
@@ -454,8 +542,25 @@ table {
   margin-top: 60px;
 }
 
+.u-obi-title {
+  font-size: 72px;
+  color: #fff;
+}
+
+.u-question-text {
+  line-height: 40px;
+}
+
 .u-space-area {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+.u-width-fifty {
+  width: 50%;
+}
+
+.u-width-ten {
+  width: 10%;
 }
 

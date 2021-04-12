@@ -1,0 +1,10 @@
+//topページbox部分
+.c-box{
+    width: 33%;
+    box-sizing: border-box;
+    margin-right: $margin-m;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,8 @@
+//ブロック要素を中央に寄せたい時に使う。
+.u-block-center{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
