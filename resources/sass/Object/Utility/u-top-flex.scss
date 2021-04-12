@@ -1,0 +1,9 @@
+//topお悩み解決部分
+.u-top-flex{
+    display: flex;
+    justify-content: space-between;
+    @include sp(){
+        flex-direction: column;
+    }
+}
+

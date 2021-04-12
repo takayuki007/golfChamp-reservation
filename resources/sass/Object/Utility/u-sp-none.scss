@@ -1,0 +1,6 @@
+//spの時none
+.u-sp-none{
+    @include sp(){
+        display: none;
+    }
+}

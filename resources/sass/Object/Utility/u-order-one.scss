@@ -1,0 +1,6 @@
+//flexの順番1
+.u-order-one{
+    @include sp(){
+        order: 1;
+    }
+}

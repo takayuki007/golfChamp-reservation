@@ -143,6 +143,12 @@ table {
   padding: 40px;
 }
 
+@media screen and (max-width: 414px) {
+  .l-bg-green {
+    padding: 40px 0;
+  }
+}
+
 .l-header {
   height: 100px;
   width: 100%;
@@ -211,6 +217,13 @@ table {
 
 .c-box:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 414px) {
+  .c-box {
+    width: 100%;
+    padding: 16px;
+  }
 }
 
 .c-box-img {
@@ -393,6 +406,13 @@ table {
   width: 40%;
 }
 
+@media screen and (max-width: 414px) {
+  .c-obi-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .c-prof-img {
   width: 100%;
   height: auto;
@@ -405,6 +425,12 @@ table {
   box-sizing: border-box;
   border: 1px solid gray;
   padding: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-question {
+    height: auto;
+  }
 }
 
 .c-reservation {
@@ -464,6 +490,13 @@ table {
   display: block;
   width: 100%;
   height: calc(100vh - 100px);
+}
+
+@media screen and (max-width: 414px) {
+  .c-top-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .c-ul {
@@ -547,8 +580,42 @@ table {
   color: #fff;
 }
 
+@media screen and (max-width: 414px) {
+  .u-order-one {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .u-order-three {
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .u-order-two {
+    order: 2;
+  }
+}
+
 .u-question-text {
   line-height: 40px;
+}
+
+.u-sp-br {
+  display: none;
+}
+
+@media screen and (max-width: 414px) {
+  .u-sp-br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .u-sp-none {
+    display: none;
+  }
 }
 
 .u-space-area {
@@ -556,8 +623,25 @@ table {
   margin-bottom: 24px;
 }
 
+.u-top-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 414px) {
+  .u-top-flex {
+    flex-direction: column;
+  }
+}
+
 .u-width-fifty {
   width: 50%;
+}
+
+@media screen and (max-width: 414px) {
+  .u-width-fifty {
+    width: 100%;
+  }
 }
 
 .u-width-ten {

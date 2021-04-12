@@ -1,4 +1,7 @@
 //width60%
 .u-width-fifty{
     width: 50%;
+    @include sp(){
+        width: 100%;
+    }
 }

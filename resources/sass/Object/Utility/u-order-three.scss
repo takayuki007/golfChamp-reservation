@@ -1,0 +1,6 @@
+//flexの順番3
+.u-order-three{
+    @include sp(){
+        order: 3;
+    }
+}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="{{ asset('images/top-img-edit.jpg')}}" alt="top-img" class="c-top-img">
+<img src="{{ asset('images/top_page/top-img-edit.jpg')}}" alt="top-img" class="c-top-img">
 <div class="l-margin">
     <div class="l-site-width">
         <h1 class="c-title p-text-center">こんなお悩みありませんか？</h1>
@@ -25,21 +25,21 @@
     </div>
     <div class="l-bg-green l-margin">
         <div class="l-site-width">
-            <h1 class="c-title p-text-center">Golf Champならゴルフのお悩み解決できます！</h1>
-            <div class="l-wrapper u-margin-top">
+            <h1 class="c-title p-text-center">Golf Champなら<br class="u-sp-br">ゴルフのお悩み解決できます！</h1>
+            <div class="u-top-flex u-margin-top">
                 <div class="c-box">
                     <p class="c-text">1、ゴルフ初心者育成プログラム</p>
-                    <img src="{{ asset('images/top-box-img1.jpg')}}" alt="top-box-img1" class="c-box-img p-margin-text-top">
+                    <img src="{{ asset('images/top_page/top-box-img1.jpg')}}" alt="top-box-img1" class="c-box-img p-margin-text-top">
                     <p class="c-text p-margin-text-top">ゴルフ未経験の方でもメキメキ上達できるプログラムをご用意しております。</p>
                 </div>
                 <div class="c-box">
                     <p class="c-text">2、業界トップのレッスン技術</p>
-                    <img src="{{ asset('images/top-box-img2.jpg')}}" alt="top-box-img2" class="c-box-img p-margin-text-top">
+                    <img src="{{ asset('images/top_page/top-box-img2.jpg')}}" alt="top-box-img2" class="c-box-img p-margin-text-top">
                     <p class="c-text p-margin-text-top">コーチは教え方もプロ。その豊富な経験からあなたのクセを見抜き、改善してくれます。</p>
                 </div>
                 <div class="c-box">
                     <p class="c-text">3、4スタンス理論でタイプ別レッスン</p>
-                    <img src="{{ asset('images/top-box-img3.jpg')}}" alt="top-box-img2" class="c-box-img p-margin-text-top">
+                    <img src="{{ asset('images/top_page/top-box-img3.jpg')}}" alt="top-box-img2" class="c-box-img p-margin-text-top">
                     <p class="c-text p-margin-text-top">からだのタイプによって指導法を使い分けます。あなたにマッチした指導法で上達を早めます。</p>
                 </div>
             </div>
@@ -49,8 +49,8 @@
         <div class="l-site-width">
             <h1 class="c-title p-text-center">ご利用までの3ステップ</h1>
         </div>
-        <div class="l-wrapper u-margin-top u-align-items-center">
-            <div class="c-blackGreen u-width-fifty">
+        <div class="u-top-flex u-margin-top u-align-items-center">
+            <div class="c-blackGreen u-width-fifty u-order-two">
                 <div class="u-block-center">
                     <h1 class="u-obi-title p-text-center">STEP1</h1>
                     <p class="c-text p-text-center u-color-white p-margin-text-top">
@@ -59,13 +59,13 @@
                     </p>
                 </div>
             </div>
-            <img src="{{ asset('images/obi-img1.jpg')}}" alt="obi-img1" class="c-obi-img">
-            <div class="c-blackGreen u-width-ten"></div>
+            <img src="{{ asset('images/top_page/obi-img1.jpg')}}" alt="obi-img1" class="c-obi-img u-order-one">
+            <div class="c-blackGreen u-width-ten u-order-three u-sp-none"></div>
         </div>
-        <div class="l-wrapper u-margin-top u-align-items-center">
-            <div class="c-blackGreen u-width-ten"></div>
-            <img src="{{ asset('images/obi-img2.jpg')}}" alt="obi-img2" class="c-obi-img">
-            <div class="c-blackGreen u-width-fifty">
+        <div class="u-top-flex u-margin-top u-align-items-center">
+            <div class="c-blackGreen u-width-ten u-order-three u-sp-none"></div>
+            <img src="{{ asset('images/top_page/obi-img2.jpg')}}" alt="obi-img2" class="c-obi-img u-order-one">
+            <div class="c-blackGreen u-width-fifty u-order-two">
                 <div class="u-block-center">
                     <h1 class="u-obi-title p-text-center">STEP2</h1>
                     <p class="c-text p-text-center u-color-white p-margin-text-top">
@@ -75,8 +75,8 @@
                 </div>
             </div>
         </div>
-        <div class="l-wrapper u-margin-top u-align-items-center">
-            <div class="c-blackGreen u-width-fifty">
+        <div class="u-top-flex u-margin-top u-align-items-center">
+            <div class="c-blackGreen u-width-fifty u-order-two">
                 <div class="u-block-center">
                     <h1 class="u-obi-title p-text-center">STEP3</h1>
                     <p class="c-text p-text-center u-color-white p-margin-text-top">
@@ -85,8 +85,8 @@
                     </p>
                 </div>
             </div>
-            <img src="{{ asset('images/obi-img3.jpg')}}" alt="obi-img3" class="c-obi-img">
-            <div class="c-blackGreen u-width-ten"></div>
+            <img src="{{ asset('images/top_page/obi-img3.jpg')}}" alt="obi-img3" class="c-obi-img u-order-one">
+            <div class="c-blackGreen u-width-ten u-order-three u-sp-none"></div>
         </div>
     </div>
     <div class="l-bg-green l-margin">

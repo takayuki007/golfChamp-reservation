@@ -7,4 +7,9 @@
     &:last-child{
         margin-right: 0;
     }
+
+    @include sp(){
+        width: 100%;
+        padding: $padding-m;
+    }
 }

@@ -1,0 +1,6 @@
+//flexの順番2
+.u-order-two{
+    @include sp(){
+        order: 2;
+    }
+}
