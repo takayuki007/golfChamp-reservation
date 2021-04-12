@@ -2,7 +2,7 @@
 .c-top-img{
     display: block;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: auto;
     @include sp(){
         width: 100%;
         height: auto;
