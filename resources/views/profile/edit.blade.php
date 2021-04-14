@@ -7,14 +7,14 @@
             <h1 class="c-title p-text-center">プロフィール</h1>
         </div>
         <div class="c-form">
-            <form method="post" action="{{ route('profile.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('profile.update') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="c-form-group">
                     <label for="file" class="c-text">■プロフィール画像</label>
 
                     <div class="c-input-area">
                         <div class="c-img-area">
-                            <input type="file" name="img" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('img') }}" required>
+                            <input type="file" name="img" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('img') }}">
                             <img src="{{ asset('/storage/profile_img/'.$profile->img) }}" alt="" class="c-prof-img js-default-prof-img">
                             <img src="" alt="" class="c-prof-img js-prof-img">
                         </div>
@@ -65,7 +65,7 @@
 
                 <div class="c-form-group">
                     <button type="submit" class="c-btn">
-                        編集する
+                        更新する
                     </button>
                 </div>
 

@@ -46,4 +46,47 @@ class ProfileController extends Controller
         return view('profile/edit',['histories'=>$histories, 'profile'=>$profile, 'golfHis'=>$golfHis]);
     }
 
+    //プロフィールの更新
+    public function update(Request $request)
+    {
+        $profile = Profile::where('user_id', Auth::id())->first();
+        //画像が変更されているかチェック
+        if (!empty($request->file('img'))){
+            //バリデーション
+            $request->validate([
+                'img'=>'nullable|file|mimes:jpeg,png,jpg|max:1000',
+            ]);
+            //画像のパスを変数に代入。
+            $path = $request->file('img')->store('public/profile_img');
+            //登録項目を代入。
+            $profile->img = basename($path);
+        }
+
+        //ゴルフ歴が変更されているかチェック！
+        if (!empty($request->golf_id)){
+            //バリデーション
+            $request->validate([
+                'golf_id'=>'nullable',
+            ]);
+            //登録項目を代入。
+            $profile->golf_history_id = $request->golf_id;
+        }
+
+        //備考が変更されているかチェック！
+        if (!empty($request->note)){
+            //バリデーション
+            $request->validate([
+                'note'=>'nullable|string|max:200'
+            ]);
+            //登録項目を代入。
+            $profile->note = $request->note;
+        }
+
+        //保存
+        $profile->save();
+
+        return redirect('/home');
+
+    }
+
 }

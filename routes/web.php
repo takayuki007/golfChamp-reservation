@@ -33,6 +33,7 @@ Route::group(['middleware'=>'verified'], function (){
     Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
     //プロフィール登録処理
     Route::post('/profile/store', 'ProfileController@store')->name('profile.store');
+    Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 
 });
 
