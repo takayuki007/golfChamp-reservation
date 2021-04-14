@@ -30,6 +30,7 @@ Route::group(['middleware'=>'verified'], function (){
     Route::post('/reservation/store', 'ReservationController@store')->name('reservation.store');
     //プロフィールページを表示
     Route::get('/profile/index', 'ProfileController@index')->name('profile.index');
+    Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
     //プロフィール登録処理
     Route::post('/profile/store', 'ProfileController@store')->name('profile.store');
 

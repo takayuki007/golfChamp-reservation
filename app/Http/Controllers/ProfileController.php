@@ -20,7 +20,7 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'img'=>'required|file|image|mimes:jpeg,png|max:1000',
+            'img'=>'required|file|mimes:jpeg,png,jpg|max:1000',
             'golf_id'=>'required',
             'note'=>'nullable|string|max:200'
         ]);
@@ -36,4 +36,14 @@ class ProfileController extends Controller
 
         return redirect('/home');
     }
+
+    //プロフィールの編集画面表示
+    public function edit()
+    {
+        $histories = History::get();
+        $profile = Profile::where('user_id', Auth::id())->first();
+        $golfHis = History::where('id', $profile->golf_history_id)->first();
+        return view('profile/edit',['histories'=>$histories, 'profile'=>$profile, 'golfHis'=>$golfHis]);
+    }
+
 }

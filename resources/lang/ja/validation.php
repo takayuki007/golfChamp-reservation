@@ -160,7 +160,8 @@ return [
         'password'=>'パスワード',
         'time_id'=>'時間',
         'coach_id'=>'コーチ',
-        'location_id'=>'レッスン場所'
+        'location_id'=>'レッスン場所',
+        'img'=>'プロフィール',
     ],
 
 ];

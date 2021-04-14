@@ -15,6 +15,7 @@
                     <div class="c-input-area">
                         <div class="c-img-area">
                             <input type="file" name="img" class="c-file js-img-input @error('file') c-is-invalid @enderror" value="{{ old('img') }}" required>
+                            <img src="{{ asset('/storage/profile_img/'.$profile->img) }}" alt="" class="c-prof-img js-default-prof-img">
                             <img src="" alt="" class="c-prof-img js-prof-img">
                         </div>
 
@@ -31,9 +32,12 @@
 
                     <div class="c-input-area">
                         <select name="golf_id" class="c-input @error('golf') c-is-invalid @enderror">
-                            <option value="">選択してしてください</option>
+                            <option value="{{ $golfHis->id}}">{{ $golfHis->year }}</option>
                             @foreach($histories as $history)
-                                <option value="{{ $history->id }}" @if(old('golf_id')== $history->id) selected  @endif>{{ $history->year }}</option>
+                                @if($history->id === $golfHis->id)
+                                    @continue
+                                @endif
+                                <option value="{{ $history->id }}" class="category-option" @if(old('golf_id')== $history->id) selected  @endif>{{ $history->year }}</option>
                             @endforeach
                         </select>
 
@@ -49,7 +53,7 @@
                     <label for="note" class="c-text">■備考</label>
                     <p class="c-text p-text-right"><span class="c-text js-show-count">0</span>/200</p>
                     <div class="c-input-area">
-                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note') }}</textarea>
+                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note', $profile->note) }}</textarea>
 
                         @error('note')
                         <span class="c-invalid-feedback" role="alert">
@@ -61,7 +65,7 @@
 
                 <div class="c-form-group">
                     <button type="submit" class="c-btn">
-                        登録する
+                        編集する
                     </button>
                 </div>
 

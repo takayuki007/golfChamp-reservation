@@ -27,7 +27,11 @@
             </div>
 
             <div class="l-side-bar">
-                <p class="p-text-center"><a href="{{ route('profile.index') }}" class="c-text">プロフィール</a></p>
+                @if(empty($profile))
+                    <p class="p-text-center"><a href="{{ route('profile.index') }}" class="c-text">プロフィール</a></p>
+                @else
+                    <p class="p-text-center"><a href="{{ route('profile.edit') }}" class="c-text">プロフィール</a></p>
+                @endif
                 <p class="p-text-center p-margin-text-top"><a href="{{ route('reservation') }}" class="c-text">レッスン予約</a></p>
                 <p class="p-text-center p-margin-text-top"><a href="#" class="c-text">退会</a></p>
             </div>

@@ -11,6 +11,9 @@ $(function(){
             return false;
         }
 
+        //すでにプロフ画像が表示されていたら、それを隠す。
+        $('.js-default-prof-img').hide();
+
         //アップロードした画像を設定する
         reader.onload = (function(file){
             return function(e){

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Reservation;
@@ -28,6 +29,7 @@ class HomeController extends Controller
     public function index()
     {
         $reservations = Auth::user()->reservations()->latest()->get();
-        return view('home', ['reservations'=>$reservations]);
+        $profile = Profile::where('user_id', Auth::id())->first();
+        return view('home', ['reservations'=>$reservations, 'profile'=>$profile]);
     }
 }
