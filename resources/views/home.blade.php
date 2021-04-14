@@ -3,16 +3,13 @@
 @section('content')
 <div class="l-margin">
     <div class="l-site-width">
-        <div class="c-wrapper">
+        <div class="l-two-column">
 
-            <div class="c-btn-area">
-                <a href="{{ route('reservation') }}" class="c-btn-second">予約はコチラ</a>
-            </div>
+            <div class="l-main-bar">
+                <h1 class="c-title p-text-center">予約リスト</h1>
 
-            <h1 class="c-title p-text-center">予約リスト</h1>
-
-            <ul class="c-reservation-ul">
-                @foreach($reservations as $reservation)
+                <ul class="c-reservation-ul">
+                    @foreach($reservations as $reservation)
                     <li class="c-reservation-li">
                         <p class="c-text">■日時</p>
                         <p class="c-text">{{ $reservation->date }}</p>
@@ -25,8 +22,16 @@
                         <p class="c-text">■コーチ</p>
                         <p class="c-text">{{ $reservation->coach->name}}</p>
                     </li>
-                @endforeach
-            </ul>
+                    @endforeach
+                </ul>
+            </div>
+
+            <div class="l-side-bar">
+                <p class="p-text-center"><a href="{{ route('profile.index') }}" class="c-text">プロフィール</a></p>
+                <p class="p-text-center p-margin-text-top"><a href="{{ route('reservation') }}" class="c-text">レッスン予約</a></p>
+                <p class="p-text-center p-margin-text-top"><a href="#" class="c-text">退会</a></p>
+            </div>
+
 
         </div>
     </div>

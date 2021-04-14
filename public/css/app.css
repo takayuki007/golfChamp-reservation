@@ -169,8 +169,23 @@ table {
   height: auto;
 }
 
+.l-main-bar {
+  width: 70%;
+  height: auto;
+}
+
 .l-margin {
   margin: 60px 0;
+}
+
+.l-side-bar {
+  width: 30%;
+  height: calc(90vh - 160px);
+  border: 12px solid #F0F0F0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 24px;
+  margin-left: 12px;
 }
 
 .l-site-width {
@@ -183,6 +198,10 @@ table {
   .l-site-width {
     width: 100%;
   }
+}
+
+.l-two-column {
+  display: flex;
 }
 
 .l-wrapper {
