@@ -28,7 +28,7 @@ class HomeController extends Controller
     //マイページを表示
     public function index()
     {
-        $reservations = Auth::user()->reservations()->latest()->get();
+        $reservations = Auth::user()->reservations()->latest()->paginate(3);
         $profile = Profile::where('user_id', Auth::id())->first();
         return view('home', ['reservations'=>$reservations, 'profile'=>$profile]);
     }

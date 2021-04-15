@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/* http://meyerweb.com/eric/tools/css/reset/
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -177,7 +179,7 @@ table {
 @media screen and (max-width: 414px) {
   .l-main-bar {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
 }
 
@@ -450,6 +452,75 @@ table {
   .c-obi-img {
     width: 100%;
     height: auto;
+  }
+}
+
+.c-pager .c-pagination {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.c-pager .c-page-li {
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  background: #3D725B;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.c-pager .c-page-a {
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  color: #fff;
+  text-decoration: none;
+}
+
+.c-pager .c-page-span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.c-pager .c-page-a:hover,
+.c-pager .c-page-a.active {
+  color: #000;
+  background: #ccffcc;
+}
+
+@media screen and (max-width: 414px) {
+  .c-pager .c-page-li {
+    display: none;
+  }
+
+  .c-pager .c-pagination .c-page-li.pre,
+  .c-pager .c-pagination .c-page-li.next {
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .c-pager .c-pagination .c-page-li.pre .c-page-a,
+  .c-pager .c-pagination .c-page-li.next .c-page-a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .c-pager .c-pagination .c-page-li.pre .c-page-span::after {
+    content: "\3000\524D\306E  3\4EF6\3078";
+  }
+
+  .c-pager .c-pagination .c-page-li.next .c-page-span::before {
+    content: "\6B21\306E  3\4EF6\3078\3000";
   }
 }
 
