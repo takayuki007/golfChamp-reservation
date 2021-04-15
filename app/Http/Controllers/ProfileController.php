@@ -80,6 +80,8 @@ class ProfileController extends Controller
             ]);
             //登録項目を代入。
             $profile->note = $request->note;
+        }else{
+            $profile->note = null;
         }
 
         //保存

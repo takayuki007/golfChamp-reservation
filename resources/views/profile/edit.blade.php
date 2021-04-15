@@ -31,7 +31,7 @@
                     <label for="golf" class="c-text">■ゴルフ歴について</label>
 
                     <div class="c-input-area">
-                        <select name="golf_id" class="c-input @error('golf') c-is-invalid @enderror">
+                        <select name="golf_id" class="c-input @error('golf_id') c-is-invalid @enderror">
                             <option value="{{ $golfHis->id}}">{{ $golfHis->year }}</option>
                             @foreach($histories as $history)
                                 @if($history->id === $golfHis->id)
@@ -41,10 +41,10 @@
                             @endforeach
                         </select>
 
-                        @error('golf')
-                        <span class="c-invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        @error('golf_id')
+                            <span class="c-invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
                         @enderror
                     </div>
                 </div>
@@ -53,8 +53,11 @@
                     <label for="note" class="c-text">■備考</label>
                     <p class="c-text p-text-right"><span class="c-text js-show-count">0</span>/200</p>
                     <div class="c-input-area">
-                        <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note', $profile->note) }}</textarea>
-
+                        @if(!empty($profile->note))
+                            <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note', $profile->note) }}</textarea>
+                        @else
+                            <textarea name="note" class="c-textarea js-input-count js-keyup-count" cols="30" rows="10" placeholder="何かあればご記入ください">{{ old('note') }}</textarea>
+                        @endif
                         @error('note')
                         <span class="c-invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

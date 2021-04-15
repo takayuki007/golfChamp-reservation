@@ -30,14 +30,14 @@
                     <label for="golf" class="c-text">■ゴルフ歴について</label>
 
                     <div class="c-input-area">
-                        <select name="golf_id" class="c-input @error('golf') c-is-invalid @enderror">
+                        <select name="golf_id" class="c-input @error('golf_id') c-is-invalid @enderror">
                             <option value="">選択してしてください</option>
                             @foreach($histories as $history)
                                 <option value="{{ $history->id }}" @if(old('golf_id')== $history->id) selected  @endif>{{ $history->year }}</option>
                             @endforeach
                         </select>
 
-                        @error('golf')
+                        @error('golf_id')
                         <span class="c-invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
