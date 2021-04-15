@@ -1,4 +1,7 @@
 //my pageのtwo column
 .l-two-column{
     display: flex;
+    @include sp(){
+        flex-direction: column;
+    }
 }

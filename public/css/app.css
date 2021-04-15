@@ -174,6 +174,13 @@ table {
   height: auto;
 }
 
+@media screen and (max-width: 414px) {
+  .l-main-bar {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .l-margin {
   margin: 60px 0;
 }
@@ -186,6 +193,14 @@ table {
   box-sizing: border-box;
   padding: 24px;
   margin-left: 12px;
+}
+
+@media screen and (max-width: 414px) {
+  .l-side-bar {
+    width: 90%;
+    margin: 0 auto;
+    height: 30vh;
+  }
 }
 
 .l-site-width {
@@ -202,6 +217,12 @@ table {
 
 .l-two-column {
   display: flex;
+}
+
+@media screen and (max-width: 414px) {
+  .l-two-column {
+    flex-direction: column;
+  }
 }
 
 .l-wrapper {

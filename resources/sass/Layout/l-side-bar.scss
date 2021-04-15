@@ -7,4 +7,10 @@
     box-sizing: border-box;
     padding: $padding-ll;
     margin-left: $margin-s;
+
+    @include sp(){
+        width: 90%;
+        margin: 0 auto;
+        height: 30vh;
+    }
 }

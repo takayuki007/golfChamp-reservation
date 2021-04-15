@@ -2,4 +2,9 @@
 .l-main-bar{
     width: 70%;
     height: auto;
+
+    @include sp(){
+        width: 90%;
+        margin: 0 auto;
+    }
 }
