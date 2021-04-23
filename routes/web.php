@@ -22,6 +22,7 @@ Auth::routes(['verify' => true]);
 Route::group(['middleware'=>'verified'], function (){
     //マイページ表示
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/search', 'HomeController@search')->name('search');
     //完了ページを表示
     Route::get('/done', 'DoneController@index')->name('done');
     //予約ページを表示

@@ -1,0 +1,10 @@
+//home検索部分のフォーム
+.c-search-form-area{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    @include sp(){
+        width: 90%;
+    }
+}

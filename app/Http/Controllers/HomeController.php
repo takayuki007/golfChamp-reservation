@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Coach;
 use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,22 @@ class HomeController extends Controller
     {
         $reservations = Auth::user()->reservations()->latest()->paginate(3);
         $profile = Profile::where('user_id', Auth::id())->first();
-        return view('home', ['reservations'=>$reservations, 'profile'=>$profile]);
+        $coaches = Coach::get();
+        return view('home', ['reservations'=>$reservations, 'profile'=>$profile, 'coaches'=>$coaches]);
     }
+
+    //検索後のマイページを表示
+    public function search(Request $request)
+    {
+        $coach_id = $request->coach_id;
+        if (empty($coach_id)){
+            return redirect('home');
+        }
+        $reservations = Reservation::where('user_id', Auth::id())->where('coach_id', $coach_id)->latest()->paginate(3);
+        $profile = Profile::where('user_id', Auth::id())->first();
+        $coaches = Coach::get();
+//        var_dump($reservations);
+        return view('search', ['reservations'=>$reservations, 'profile'=>$profile, 'coaches'=>$coaches]);
+    }
+
 }

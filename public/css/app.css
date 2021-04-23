@@ -572,6 +572,22 @@ table {
   height: auto;
 }
 
+.c-search-form-area {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  .c-search-form-area {
+    width: 90%;
+  }
+}
+
+.c-search-space {
+  margin-right: 12px;
+}
+
 .c-text {
   font-size: 18px;
   color: #000;

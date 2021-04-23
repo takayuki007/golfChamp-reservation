@@ -16,7 +16,7 @@
                                 <option value="">絞り込み検索</option>
                                 <option value="0">全てのコーチ</option>
                                 @foreach($coaches as $coach)
-                                    <option value="{{ $coach->id }}">{{ $coach->name }}</option>
+                                <option value="{{ $coach->id }}">{{ $coach->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -30,18 +30,18 @@
 
                 <ul class="c-reservation-ul">
                     @foreach($reservations as $reservation)
-                    <li class="c-reservation-li">
-                        <p class="c-text">■日時</p>
-                        <p class="c-text">{{ $reservation->date }}</p>
-                        <p class="c-text">■時間</p>
-                        <p class="c-text">{{ $reservation->time->time}}（10分前集合）</p>
-                        <p class="c-text">■場所</p>
-                        <p class="c-text">{{ $reservation->location->name}}</p>
-                        <p class="c-text">（{{ $reservation->location->address}}）</p>
-                        <a class="c-text" href="{{ $reservation->location->url }}" target="_blank">GoogleMap</a>
-                        <p class="c-text">■コーチ</p>
-                        <p class="c-text">{{ $reservation->coach->name}}</p>
-                    </li>
+                        <li class="c-reservation-li">
+                            <p class="c-text">■日時</p>
+                            <p class="c-text">{{ $reservation->date }}</p>
+                            <p class="c-text">■時間</p>
+                            <p class="c-text">{{ $reservation->time->time}}（10分前集合）</p>
+                            <p class="c-text">■場所</p>
+                            <p class="c-text">{{ $reservation->location->name}}</p>
+                            <p class="c-text">（{{ $reservation->location->address}}）</p>
+                            <a class="c-text" href="{{ $reservation->location->url }}" target="_blank">GoogleMap</a>
+                            <p class="c-text">■コーチ</p>
+                            <p class="c-text">{{ $reservation->coach->name}}</p>
+                        </li>
                     @endforeach
                 </ul>
 
