@@ -1,0 +1,17 @@
+//評価エリア部分
+.c-evaluation-area{
+    width: 100%;
+    height: auto;
+    border: 12px solid $green;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: $padding-ll;
+
+    @include sp(){
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: $padding-l;
+    }
+
+}

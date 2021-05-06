@@ -30,18 +30,20 @@
 
                 <ul class="c-reservation-ul">
                     @foreach($reservations as $reservation)
-                        <li class="c-reservation-li">
-                            <p class="c-text">■日時</p>
-                            <p class="c-text">{{ $reservation->date }}</p>
-                            <p class="c-text">■時間</p>
-                            <p class="c-text">{{ $reservation->time->time}}（10分前集合）</p>
-                            <p class="c-text">■場所</p>
-                            <p class="c-text">{{ $reservation->location->name}}</p>
-                            <p class="c-text">（{{ $reservation->location->address}}）</p>
-                            <a class="c-text" href="{{ $reservation->location->url }}" target="_blank">GoogleMap</a>
-                            <p class="c-text">■コーチ</p>
-                            <p class="c-text">{{ $reservation->coach->name}}</p>
-                        </li>
+                        <a href="{{ route('detail', $reservation->id) }}" class="c-page-link">
+                            <li class="c-reservation-li">
+                                <p class="c-text">■日時</p>
+                                <p class="c-text">{{ $reservation->date }}</p>
+                                <p class="c-text">■時間</p>
+                                <p class="c-text">{{ $reservation->time->time}}（10分前集合）</p>
+                                <p class="c-text">■場所</p>
+                                <p class="c-text">{{ $reservation->location->name}}</p>
+                                <p class="c-text">（{{ $reservation->location->address}}）</p>
+                                <a class="c-text" href="{{ $reservation->location->url }}" target="_blank">GoogleMap</a>
+                                <p class="c-text">■コーチ</p>
+                                <p class="c-text">{{ $reservation->coach->name}}</p>
+                            </li>
+                        </a>
                     @endforeach
                 </ul>
 

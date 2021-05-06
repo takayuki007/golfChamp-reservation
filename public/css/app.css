@@ -311,6 +311,49 @@ table {
   opacity: 0.7;
 }
 
+.c-evaluation-area {
+  width: 100%;
+  height: auto;
+  border: 12px solid #81EFBE;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-evaluation-area {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+.c-evaluation-btn {
+  color: #fff;
+  border: none;
+  width: 50%;
+  height: 48px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.c-evaluation-btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.c-evaluation-btn:first-child {
+  margin-right: 8px;
+}
+
+.c-evaluation-btn-area {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .c-file {
   width: 100%;
   height: 40px;
@@ -453,6 +496,14 @@ table {
     width: 100%;
     height: auto;
   }
+}
+
+.c-page-link {
+  text-decoration: none;
+}
+
+.c-page-link:hover {
+  cursor: pointer;
 }
 
 .c-pager .c-pagination {
@@ -641,6 +692,14 @@ table {
   .c-wrapper {
     width: 90%;
   }
+}
+
+.p-btn-blue {
+  background: #3490dc;
+}
+
+.p-btn-red {
+  background: #e3342f;
 }
 
 .p-margin-text-top {

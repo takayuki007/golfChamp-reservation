@@ -1,0 +1,7 @@
+//マイページのページリンク部分
+.c-page-link{
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}

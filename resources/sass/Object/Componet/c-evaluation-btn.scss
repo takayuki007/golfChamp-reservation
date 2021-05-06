@@ -1,0 +1,16 @@
+//ボタン部分
+.c-evaluation-btn{
+    color: $white;
+    border: none;
+    width: 50%;
+    height: 48px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    &:hover{
+        cursor: pointer;
+        opacity: .75;
+    }
+    &:first-child{
+        margin-right: $margin-ss;
+    }
+}

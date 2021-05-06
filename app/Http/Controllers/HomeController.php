@@ -45,7 +45,6 @@ class HomeController extends Controller
         $reservations = Reservation::where('user_id', Auth::id())->where('coach_id', $coach_id)->latest()->paginate(3);
         $profile = Profile::where('user_id', Auth::id())->first();
         $coaches = Coach::get();
-//        var_dump($reservations);
         return view('search', ['reservations'=>$reservations, 'profile'=>$profile, 'coaches'=>$coaches]);
     }
 
