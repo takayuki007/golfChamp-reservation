@@ -13,10 +13,10 @@
             <p class="c-text">{{ coach}}</p>
         </div>
 
-        <div class="c-evaluation-area js-evaluation-area" v-if="evaluation">
+        <div class="c-evaluation-area js-evaluation-area" v-show="after">
             <p class="c-text p-text-center">レッスンをご評価いただきありがとうございます。</p>
         </div>
-        <div class="c-evaluation-area" v-else>
+        <div class="c-evaluation-area" v-show="before">
             <p class="c-text p-text-center">レッスンの評価をお願いします！</p>
             <div class="c-evaluation-btn-area">
                 <button type="submit" class="c-evaluation-btn p-btn-red" v-on:click="goodEvaluation">
@@ -33,7 +33,7 @@
 
 <script>
     export default {
-        props:['id','date','time','name','address','url','coach','evaluation'],
+        props:['id','date','time','name','address','url','coach'],
         data:function (){
             return{
                 reservation_id: this.id,
@@ -53,6 +53,9 @@
                 axios.post('/api/good/' + reservation_id);
             },
             badEvaluation:function (){
+                this.before = false;
+                this.after = true;
+                $('.js-evaluation-area').fadeIn(3000);
                 var reservation_id = this.reservation_id;
                 axios.post('/api/bad/' + reservation_id);
             },

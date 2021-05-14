@@ -31,4 +31,11 @@ class Reservation extends Model
     {
         return $this->belongsTo('App\Coach');
     }
+
+    //evaluationのリレーション
+    public function evaluation()
+    {
+        return $this->hasOne('App\Evaluation');
+    }
+
 }

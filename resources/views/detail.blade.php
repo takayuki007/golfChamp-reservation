@@ -8,13 +8,24 @@
             <div class="l-main-bar">
                 <h1 class="c-title p-text-center">評価</h1>
 
-                <detail-component :date="{{ json_encode($reservation->date) }}"
-                                  :time="{{ json_encode($reservation->time->time) }}"
-                                  :name="{{ json_encode($reservation->location->name) }}"
-                                  :address="{{ json_encode($reservation->location->address) }}"
-                                  :url="{{ json_encode($reservation->location->url) }}"
-                                  :coach="{{ json_encode($reservation->coach->name) }}"></detail-component>
-
+                @if(!empty($evaluation))
+                    <detail-component :id="{{ json_encode($reservation->id) }}"
+                                      :date="{{ json_encode($reservation->date) }}"
+                                      :time="{{ json_encode($reservation->time->time) }}"
+                                      :name="{{ json_encode($reservation->location->name) }}"
+                                      :address="{{ json_encode($reservation->location->address) }}"
+                                      :url="{{ json_encode($reservation->location->url) }}"
+                                      :coach="{{ json_encode($reservation->coach->name) }}"
+                                      :evaluation="{{ json_encode($evaluation->id) }}"></detail-component>
+                @else
+                    <evaluation-component :id="{{ json_encode($reservation->id) }}"
+                                      :date="{{ json_encode($reservation->date) }}"
+                                      :time="{{ json_encode($reservation->time->time) }}"
+                                      :name="{{ json_encode($reservation->location->name) }}"
+                                      :address="{{ json_encode($reservation->location->address) }}"
+                                      :url="{{ json_encode($reservation->location->url) }}"
+                                      :coach="{{ json_encode($reservation->coach->name) }}"></evaluation-component>
+                @endif
             </div>
 
             <div class="l-side-bar">
